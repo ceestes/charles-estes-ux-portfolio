@@ -1,92 +1,119 @@
-.grid-container
+$grid-spacing: 1.5%
+$grid-spacing-mobile: 5%
+
+.wrapper
   width: 100%
-  max-width: 1200px
+  max-width: 1020px
+  margin-left: auto
+  margin-right: auto
+
+/* clearfix
 
 .row
   *zoom: 1
 
   &:before,
   &:after
-    content: " "
-    display: table
+    content: ' '
+    display: block
 
   &:after
     clear: both
 
-[class*='col-']
+/* columns
+
+[class^="col-"]
   float: left
-  min-height: 1px
-  width: 16.66%
-  /* gutter
-  padding: 12px
-  background-color: #ffdcdc
+  padding: $grid-spacing
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  /*background-color: #ffdcdc
+
+  &:last-child
+    padding-right: 0%
+
 
 .col-1
-  width: 16.66%
+  width: (100% / 12) - ($grid-spacing * 11 / 12)
 
 .col-2
-  width: 33.33%
+  width: (100% / 6) - ($grid-spacing * 10 / 12)
 
 .col-3
-  width: 50%
+  width: (100% / 4) - ($grid-spacing * 9 / 12)
 
 .col-4
-  width: 66.66%
+  width: (100% / 3) - ($grid-spacing * 8 / 12)
 
 .col-5
-  width: 83.33%
+  width: (100% / 2.4) - ($grid-spacing * 7 / 12)
 
 .col-6
+  width: (100% / 2) - ($grid-spacing * 6 / 12)
+
+.col-7
+  width: (100% / 1.714285714285714) - ($grid-spacing * 5 / 12)
+
+.col-8
+  width: (100% / 1.5) - ($grid-spacing * 4 / 12)
+
+.col-9
+  width: (100% / 1.333333333333333) - ($grid-spacing * 3 / 12)
+
+.col-10
+  width: (100% / 1.2) - ($grid-spacing * 2 / 12)
+
+.col-11
+  width: (100% / 1.090909090909091) - ($grid-spacing * 1 / 12)
+
+.col-12
   width: 100%
 
-.outline,
-.outline *
+/*.outline,
+/*.outline *
   outline: 1px solid #f6a1a1
 
-@media all and (max-width: 800px)
+@media (max-width: 480px)
 
-.col-1
-  width: 33.33%
+  [class^="col-"]
+    padding: $grid-spacing-mobile
 
-.col-2
-  width: 50%
+    &:last-child
+      padding-right: 5%
 
-.col-3
-  width: 83.33%
+  .col-1
+    width: (100% / 4) - ($grid-spacing-mobile * 3 / 4)
 
-.col-4
-  width: 100%
+  .col-2
+    width: (100% / 2) - ($grid-spacing-mobile * 2 / 4)
 
-.col-5
-  width: 100%
+  .col-3
+    width: (100% / 1.333333333333333) - ($grid-spacing-mobile * 1 / 4)
 
-.col-6
-  width: 100%
-
-.row
-
-  .col-2:last-of-type
+  .col-4
     width: 100%
 
-  .col-5 ~ .col-1
+  .col-5
     width: 100%
 
-@media all and (max-width: 650px)
+  .col-6
+    width: 100%
 
-.col-1
-  width: 50%
+  .col-7
+    width: 100%
 
-.col-2
-  width: 100%
+  .col-8
+    width: 100%
 
-.col-3
-  width: 100%%
+  .col-9
+    width: 100%
 
-.col-4
-  width: 100%
+  .col-10
+    width: 100%
 
-.col-5
-  width: 100%
+  .col-11
+    width: 100%
 
-.col-6
-  width: 100%
+  .col-12
+    width: 100%

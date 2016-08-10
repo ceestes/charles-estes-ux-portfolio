@@ -4,24 +4,28 @@ form
 
   label
     display: block
-    margin-bottom: 15px
+    margin-bottom: 10px
     box-sizing: border-box
 
     span
+      font-size: 0.875em
       display: block
-      margin-bottom: 12px
+      margin-bottom: 10px
 
     input, textarea
-      border: 1 solid #5b6670
-      border-radius: 3
+      border-width: 1px
+      border-color: #5b6670
+      border-radius: 3px
+      border-style: solid
       box-sizing: border-box
       width: 100%
 
-      [type="submit"]
-        border: none
+    input
+      height: 30px
 
-input [type="text"], input [type="email"]
-  height: 30px
+input[type="submit"]
+  border: none
+  margin-top: 15px
 
 textarea
   height: 100px

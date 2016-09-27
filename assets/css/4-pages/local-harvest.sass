@@ -1,0 +1,274 @@
+.projects
+  position: absolute
+  background-color: transparentize(white, 0.25)
+  height: 40px
+  width: 100%
+  z-index: 1
+
+  .project-title
+    float: left
+    margin: 0 0 0 30px
+
+    h5
+      margin: 10px 0 0 0
+      color: #333e48
+      text-transform: uppercase
+      letter-spacing: .05em
+      font-size: 0.875em
+      font-weight: 600
+
+  nav
+    float: right
+    margin-right: 50px
+
+  .project-nav
+    background-color: transparent
+    margin: 4px 0 0 0
+
+    li
+      display: inline-block
+
+      a
+        color: #333e48
+        font-weight: 600
+        font-size: 0.875em
+        text-decoration: none
+        text-transform: uppercase
+        letter-spacing: .05em
+        margin-left: 20px
+
+        img
+          position: relative
+          top: 6px
+
+      a:hover
+        color: #00c4b3
+
+      .inactive
+        opacity: 0.6
+        //color: transparentize(black, 0.7)
+
+//#overlay
+  position: relative
+  background:
+    image: linear-gradient(rgba(255, 0, 0, 0.45), rgba(255, 0, 0, 0.45))
+  z-index: 0
+
+
+.local-harvest-header
+  position: relative
+  height: 550px
+  background:
+    //color: transparentize(pink, 0.25)
+    image: url(../img/vegetables.png)
+    size: cover
+    repeat: no-repeat
+    position: top center
+    attachment: fixed
+  z-index: -1
+  padding: 0
+  margin: 0
+
+.lh-mockup-head
+  position: absolute
+  float: left
+  height: 654px
+  width: 50%
+  top: 35%
+  background:
+    image: url(../img/local-harvest-front-1.png)
+    size: contain
+    position: bottom left
+    repeat: no-repeat
+  z-index: 1
+
+.lh-logo
+  position: absolute
+  float: right
+  left: 55%
+  top: 25%
+  height: 300px
+  width: 25%
+  background:
+    //color: transparentize(pink, 0.25)
+    image: url(../img/local-harvest-logo.svg)
+    size: contain
+    position: center center
+    repeat: no-repeat
+  z-index: -1
+
+.lh-summary
+  position: absolute
+  padding-left: 30px
+  top: 100%
+  left: 50%
+  //background:
+    color: transparentize(pink, 0.25)
+  //float: right
+  width: 30%
+
+  .section-heading
+    padding-left: 0
+
+#red
+  border: none
+  border-bottom: 2px solid #b71c1c
+
+  p
+    margin-top: 25px
+
+
+#white-text
+  color: #fff
+
+.lh-brief
+  background:
+    color: #52565a
+  margin-top: 400px
+  height: 300px
+
+  .col-3
+    padding-top: 90px
+
+    img
+      position: relative
+      left: 50%
+      margin-left: -15%
+      height: 90px
+
+  h2
+    color: #fff
+    padding: 70px 0 0 0
+    //margin-top: 60px
+    //margin-bottom: 80px
+    margin: 0 0 0 0
+
+//PERSONAS
+
+.lh-persona
+  position: relative
+  height: auto
+  //background:
+    color: transparentize(pink, 0.25)
+
+  .wrapper
+
+    .row
+      margin-top: 5%
+      margin-bottom: 5%
+
+      .persona-img
+        //position: relative
+        box-shadow: 3px 3px 5px 1.5px #ccc
+        width: 299.203
+        height: 897.609px
+        //height: 900px
+        //width: 100%
+        //margin-left: 0
+        //top: 15%
+        //left: 20%
+        //margin-left: -10%
+        //background:
+          image: url(../img/lh-personas.png)
+          size: contain
+          position: center center
+          repeat: no-repeat
+        //z-index: -1
+
+      .persona-img:hover
+        position: relative
+        top: -25px
+        left: -35px
+        width: 400px
+        height: auto
+        display: block
+        z-index: 999
+
+      //.persona-img-2
+        //position: absolute
+        box-shadow: 3px 3px 5px 1.5px #ccc
+        height: 900px
+        //width: auto
+        //top: 30%
+        //left: 50%
+        //margin-left: -10%
+        background:
+          image: url(../img/lh-personas2.png)
+          size: contain
+          position: center center
+          repeat: no-repeat
+        //z-index: 0
+
+      //.persona-img-3
+        //position: absolute
+        box-shadow: 3px 3px 5px 1.5px #ccc
+        height: 900px
+        //width: auto
+        //top: 45%
+        //left: 60%
+        //margin-left: -10%
+        background:
+          image: url(../img/lh-personas3.png)
+          size: contain
+          position: center center
+          repeat: no-repeat
+        //z-index: 1
+
+//WIREFRAMES SECTION
+
+.lh-wireframes
+  .wrapper
+    .row
+      .col-12
+        img
+          margin-top: 10%
+          max-width: 90%
+
+//FEATURES SECTION
+
+.lh-features
+  h2
+    color: #b71c1c
+
+  h4
+    color: #52565a
+  .wrapper
+    .row
+      margin-top: 10%
+
+      .icon
+        width: 100%
+
+      .col-12
+        text-align: center
+
+        h2
+          color: #b71c1c
+
+        img
+          margin-top: 10%
+          max-width: 90%
+
+.prototype
+  margin-top: 100px
+  text-align: center
+
+.slides
+  text-align: center
+
+  h2
+    margin-top: 100px
+    margin-bottom: 75px
+
+  img
+    max-width: 100%
+    height: 300px
+
+  //img:hover
+    position: relative
+    top: -25px
+    left: -35px
+    width: 400px
+    height: auto
+    display: block
+    z-index: 999

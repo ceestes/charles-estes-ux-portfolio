@@ -1,10 +1,13 @@
 body
-  font-family: 'Lato', sans-serif
+  font-family: 'Proxima Nova', sans-serif
   overflow-x: hidden
 
 .spacer
   margin-top: 70px
   margin-bottom: 70px
+
+.push
+  margin-top: 70px
 
 .page-home
   text-align: center
@@ -28,6 +31,7 @@ body
 
       li
         display: inline-block
+
         a
           color: #333e48
           font-weight: 500
@@ -39,21 +43,31 @@ body
           padding: 0.313em 0
 
         a:hover
-          background-color: transperent
+          color: #999
+          border: none
+          border-bottom: 2px solid #00c4b3
 
         .active
           border: none
           border-bottom: 2px solid #00c4b3
 
 .header-background
-  background-color: #004e59
-  height: 550px
+  position: relative
+  height: 800px
+  background:
+    image: url(../img/headline.jpeg)
+    size: cover
+    repeat: no-repeat
+    position: center center
+    attachment: fixed
+  z-index: -1
   padding: 0
   margin: 0
 
 
 .headline
-  padding-top: 12.500em
+  padding-top: 250px
+  text-align: center
 
   h4
     color: #fff
@@ -76,14 +90,14 @@ body
       padding-bottom: 0px
 
   h3
-    color: #004e59
+    color: #fff
     font-size: 1.313rem
     font-weight: bold
     text-transform: uppercase
     margin-top: 1.875em
 
     span
-      background-color: #fff
+      background-color: #00c4b3
       padding: 0.625rem 0.938rem
 
   p
@@ -93,11 +107,26 @@ body
 /* ABOUT INTRO
 
 .about
-  height: auto
-  background: url(../img/about-background.png) no-repeat
-  background-size: cover
+  //background:
+    color: transparentize(pink, 0.3)
+  height: 650px
+  padding: 0
+  margin: 0
 
-  .col-6
+  .profile
+    position: relative
+    float: right
+    z-index: -1
+    width: 40%
+    height: 400px
+    background:
+      image: url(../img/profile.jpg)
+      size: contain
+      repeat: no-repeat
+
+  .summary
+    z-index: 1
+    //padding-right: 20px
 
     .contact-info
       margin-top: 50px
@@ -117,7 +146,12 @@ body
 .contact-bold
   font-weight: 700
 
+
 .section-heading
+  //background:
+    color: transparentize(blue, 0.3)
+  text-align: left
+  margin-top: 0
   font-size: 18px
   font-weight: bold
   padding-top: 55px

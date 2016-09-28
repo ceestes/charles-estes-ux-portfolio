@@ -172,7 +172,7 @@ body
 .title-note
   font-weight: normal
   //font-size: 60%
-  color: #999
+  color: #5B6670
 
 .flex-title
   display: flex
@@ -191,7 +191,7 @@ body
     color: transparentize(blue, 0.3)
   text-align: left
   margin-top: 0
-  font-size: 18px
+  font-size: 20px
   font-weight: bold
   padding-top: 55px
   padding-left: 15px
@@ -199,7 +199,7 @@ body
   letter-spacing: 0.04em
   display: block
 
-  span
+  //span
     border: none
     border-bottom: 2px solid #00c4b3
 
@@ -362,8 +362,12 @@ body
 
 /* HIRE ME SECTION
 
+
 .contact
-  background-color: #F5F8FA
+  width: auto
+  height: auto
+  display: block
+  position: relative
 
   h3
     padding-top: 120px
@@ -372,6 +376,26 @@ body
     font-size: 40px
     font-weight: normal
     margin: 0 0 0 0
+
+.contact::after
+  content: ""
+  background: url(../img/map-home.png)
+  opacity: 0.15
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  position: absolute
+  z-index: -1
+//.contact
+  background:
+    image: url(../img/map-home.png)
+    size: cover
+    repeat: no-repeat
+  //opacity: .15
+  //z-index: -1
+
+
 
 /* CONTACT TABLE STYLE
 
@@ -414,6 +438,23 @@ body
         flex-wrap: wrap
 
         .service
+          margin: 20px 0 0 0
+          display: flex
+          width: 100%
+
+          .content
+            width: 100%
+
+  .services-overview
+
+    .wrapper
+
+      .row-2
+        padding-top: 30px
+        display: flex
+        flex-wrap: wrap
+
+        .service-item
           margin: 20px 0 0 0
           display: flex
           width: 100%

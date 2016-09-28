@@ -357,7 +357,6 @@ input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: #00c4b3;
-  border-radius: 4px;
   cursor: pointer;
   margin-right: 15px;
 }
@@ -933,7 +932,17 @@ body {
 /* ABOUT INTRO */
 .about {
   height: 650px;
-  padding: 0;
+  padding: 70px 0 0 0;
+  margin: 0;
+}
+.about .button-2 {
+  position: absolute;
+  left: 50%;
+  margin-left: -4.912rem;
+}
+.about h3 {
+  font-size: 24px;
+  text-transform: uppercase;
   margin: 0;
 }
 .about .profile {
@@ -990,32 +999,48 @@ body {
 }
 
 /* CAPABILITES SECTION */
-.capabilities {
+.services-overview {
   margin: 0;
   padding: 0;
   height: auto;
   max-width: 100%;
-  background-color: #f7f7f7;
+  background-color: #F5F8FA;
 }
-.capabilities .wrapper .row-2 {
-  padding-top: 30px;
+.services-overview h3 {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+}
+.services-overview .button-2 {
+  position: relative;
+  left: 50%;
+  margin-left: -6.15rem;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+.services-overview .row-2 {
+  padding-top: 40px;
   padding-left: 15px;
   padding-right: 15px;
   display: flex;
   flex-wrap: wrap;
 }
-.capabilities .wrapper .row-2 .service {
+.services-overview .row-2 .service-item {
   margin: 20px 0 0 0;
   display: flex;
   width: 50%;
 }
-.capabilities .wrapper .row-2 .service img {
+.services-overview .row-2 .service-item h6 {
+  text-transform: uppercase;
+}
+.services-overview .row-2 .service-item img {
   margin-top: 5px;
   margin-right: 30px;
   padding: 0;
 }
-.capabilities .wrapper .row-2 .service .content {
-  width: 70%;
+.services-overview .row-2 .service-item .content {
+  width: 75%;
 }
 
 /* MY WORK SECTION */
@@ -1039,9 +1064,59 @@ body {
   margin: 0 auto;
 }
 
+/* MY WORK VERSION 2 */
+.lh-home {
+  position: absolute;
+  height: 800px;
+  width: 50%;
+  top: 28%;
+  padding: 0 20px 0 20px;
+  background-image: url(../img/local-harvest-home@2x.png);
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.work {
+  position: relative;
+  height: 610px;
+  width: 100%;
+  background-color: #333E48;
+  z-index: -1;
+  overflow: hidden;
+}
+.work .work-headline {
+  position: relative;
+  padding: 0 20px 0 20px;
+  max-width: 40%;
+  top: 32%;
+  left: 50%;
+  z-index: 1;
+}
+.work .work-headline h3 {
+  text-align: left;
+  color: #fff;
+  font-size: 35px;
+  font-weight: normal;
+}
+.work .work-headline .button-2 {
+  margin-top: 30px;
+  margin-left: 0;
+  left: 50%;
+}
+
 /* HIRE ME SECTION */
 .contact {
-  background-color: #f7f7f7;
+  background-color: #F5F8FA;
+}
+.contact h3 {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+  margin: 0 0 0 0;
 }
 
 /* CONTACT TABLE STYLE */
@@ -1205,6 +1280,35 @@ body {
   font-size: 0.875em;
   font-weight: 500;
   line-height: 1.8;
+}
+
+/* CAPABILITES SECTION */
+.capabilities {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  max-width: 100%;
+  background-color: #f7f7f7;
+}
+.capabilities .wrapper .row-2 {
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.capabilities .wrapper .row-2 .service {
+  margin: 20px 0 0 0;
+  display: flex;
+  width: 50%;
+}
+.capabilities .wrapper .row-2 .service img {
+  margin-top: 5px;
+  margin-right: 30px;
+  padding: 0;
+}
+.capabilities .wrapper .row-2 .service .content {
+  width: 70%;
 }
 
 /* SKILLS SECTION */

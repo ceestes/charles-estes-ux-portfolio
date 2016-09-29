@@ -320,7 +320,7 @@ p {
   margin: 0 0 20px 0;
   line-height: 24px;
   color: #5b6670;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 
 em {
@@ -399,8 +399,10 @@ input[type="button"]:focus {
 .button-2:hover,
 .button-2:active,
 .button-2:focus {
-  color: #008276;
-  border-color: #888;
+  color: #00c4b3;
+  background-color: transparent;
+  border: solid 3px #00c4b3;
+  padding: 7px 22px;
   text-decoration: none;
   outline: 0;
 }
@@ -415,6 +417,13 @@ input[type="button"]:focus {
 .wrapper-md {
   width: 100%;
   max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper-lg {
+  width: 100%;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -628,6 +637,7 @@ input[type="button"]:focus {
   height: 320px;
   color: #fff;
   display: block;
+  border-top: solid 8px #5B6670;
 }
 .footer nav {
   float: left;
@@ -701,17 +711,18 @@ form {
 }
 form label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   box-sizing: border-box;
 }
 form label span {
-  font-size: 0.875em;
+  font-size: 1em;
+  font-weight: 600;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 form label input, form label textarea {
   border-width: 1px;
-  border-color: #5b6670;
+  border-color: #5B6670;
   border-radius: 3px;
   border-style: solid;
   box-sizing: border-box;
@@ -1073,7 +1084,7 @@ body {
 .services-img {
   position: relative;
   display: block;
-  width: 600px;
+  width: 500px;
   left: 50%;
   margin: 100px auto 100px -300px;
 }
@@ -1118,8 +1129,9 @@ body {
   height: 610px;
   width: 100%;
   background-color: #333E48;
-  z-index: -1;
   overflow: hidden;
+  border-top: solid 8px #5B6670;
+  border-bottom: solid 8px #5B6670;
 }
 .work .work-headline {
   position: relative;
@@ -1127,7 +1139,6 @@ body {
   max-width: 40%;
   top: 32%;
   left: 50%;
-  z-index: 1;
 }
 .work .work-headline h3 {
   text-align: left;
@@ -1458,6 +1469,60 @@ body {
   margin-top: 4.688em;
 }
 
+.project {
+  height: auto;
+  width: auto;
+  margin-top: 10px;
+  background-color: #F5F8FA;
+}
+.project .flex-work {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.project .row {
+  padding: 100px 0 120px 0;
+  max-width: 100%;
+}
+.project .row img {
+  padding: 0 50px 0 50px;
+  max-width: 380px;
+}
+.project .project-title {
+  margin-top: 20px;
+  padding: 0 50px 0 50px;
+  max-width: 600px;
+}
+.project .project-title h3 {
+  font-size: 20px;
+  color: #333E48;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.project .project-title h4 {
+  font-size: 30px;
+  color: #333E48;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.lh-work {
+  height: 300px;
+  width: 380px;
+  padding: 0 50px 0 50px;
+  background-image: url(../img/local-harvest-home.png);
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.h-declare {
+  height: 500px;
+  overflow: hidden;
+}
+
 .hoplite-header {
   position: relative;
   height: 550px;
@@ -1587,30 +1652,37 @@ body {
   opacity: 0.6;
 }
 
-.local-harvest-header {
+.lh-head-container {
   position: relative;
   height: 550px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.lh-header {
+  position: absolute;
   background-image: url(../img/vegetables.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: fixed;
+  height: 600px;
+  width: 100%;
+  filter: blur(3px) brightness(0.6) saturate(0.9);
   z-index: -1;
-  padding: 0;
-  margin: 0;
 }
 
 .lh-mockup-head {
   position: absolute;
   float: left;
   height: 654px;
-  width: 50%;
+  width: 100%;
   top: 35%;
   background-image: url(../img/local-harvest-front-1.png);
   background-size: contain;
   background-position: bottom left;
   background-repeat: no-repeat;
-  z-index: 1;
+  z-index: 0;
 }
 
 .lh-logo {
@@ -1627,23 +1699,28 @@ body {
   z-index: -1;
 }
 
+.lh-overview {
+  height: auto;
+  width: 100%;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .lh-summary {
-  position: absolute;
-  padding-left: 30px;
-  top: 100%;
-  left: 50%;
-  width: 30%;
+  padding: 100px 0 150px 0;
+  max-width: 50%;
+}
+.lh-summary h4 {
+  text-transform: uppercase;
+  margin: 0 0 0 0;
+}
+.lh-summary p {
+  margin: 20px 0 0 0;
 }
 .lh-summary .section-heading {
   padding-left: 0;
-}
-
-#red {
-  border: none;
-  border-bottom: 2px solid #b71c1c;
-}
-#red p {
-  margin-top: 25px;
 }
 
 #white-text {
@@ -1652,7 +1729,6 @@ body {
 
 .lh-brief {
   background-color: #52565a;
-  margin-top: 400px;
   height: 300px;
 }
 .lh-brief .col-3 {

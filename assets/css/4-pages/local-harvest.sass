@@ -54,10 +54,16 @@
     image: linear-gradient(rgba(255, 0, 0, 0.45), rgba(255, 0, 0, 0.45))
   z-index: 0
 
+// LOCAL HARVEST HEADER
 
-.local-harvest-header
+.lh-head-container
   position: relative
   height: 550px
+  z-index: -1
+  overflow: hidden
+
+.lh-header
+  position: absolute
   background:
     //color: transparentize(pink, 0.25)
     image: url(../img/vegetables.png)
@@ -65,22 +71,23 @@
     repeat: no-repeat
     position: top center
     attachment: fixed
+  height: 600px
+  width: 100%
+  filter: blur(3px) brightness(.60) saturate(.90)
   z-index: -1
-  padding: 0
-  margin: 0
 
 .lh-mockup-head
   position: absolute
   float: left
   height: 654px
-  width: 50%
+  width: 100%
   top: 35%
   background:
     image: url(../img/local-harvest-front-1.png)
     size: contain
     position: bottom left
     repeat: no-repeat
-  z-index: 1
+  z-index: 0
 
 .lh-logo
   position: absolute
@@ -97,20 +104,36 @@
     repeat: no-repeat
   z-index: -1
 
+.lh-overview
+  height: auto
+  width: 100%
+  justify-content: flex-start
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
 .lh-summary
-  position: absolute
-  padding-left: 30px
-  top: 100%
-  left: 50%
+  //position: absolute
+  //padding-left: 30px
+  //top: 100%
+  //left: 50%
   //background:
     color: transparentize(pink, 0.25)
   //float: right
-  width: 30%
+  padding: 100px 0 150px 0
+  max-width: 50%
+
+  h4
+    text-transform: uppercase
+    margin: 0 0 0 0
+
+  p
+    margin: 20px 0 0 0
 
   .section-heading
     padding-left: 0
 
-#red
+//#red
   border: none
   border-bottom: 2px solid #b71c1c
 
@@ -124,7 +147,7 @@
 .lh-brief
   background:
     color: #52565a
-  margin-top: 400px
+  //margin-top: 400px
   height: 300px
 
   .col-3

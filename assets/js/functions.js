@@ -1,5 +1,9 @@
 $( document ).ready(function() {
 
-  // Get started!
+  jQuery(".menu-trigger").click(function() {
+
+    jQuery("nav").slideToggle();
+    
+  });
 
 });

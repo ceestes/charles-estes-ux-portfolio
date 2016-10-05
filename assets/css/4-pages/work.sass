@@ -1,19 +1,29 @@
 .work-bg
-  //position: relative
+  position: relative
   height: 500px
   width: 100%
-  background-color: #333E48
+  background:
+    image: url(../img/desk-office-hero-workspace.jpg)
+    size: cover
+    position: center center
+    repeat: no-repeat
+    attachment: fixed
+  filter: saturate(.5)
   margin: 0
   padding: 0
   border-bottom: solid 8px #5B6670
+  z-index: -1
 
 .flex-center
   display: flex
   align-items: center
 
 .work-heading
+  //position: absolute
+  margin: 0
   max-width: 800px
-  padding: 0 50px 0 100px
+  padding: 0 50px 0 20px
+  z-index: 1
 
   h3
     font-size: 25px

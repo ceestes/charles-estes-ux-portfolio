@@ -906,6 +906,9 @@ body {
   padding: 0;
   margin: 0;
 }
+.header-background img {
+  margin-top: 150px;
+}
 
 .headline {
   padding-top: 250px;
@@ -932,7 +935,7 @@ body {
 }
 .headline h3 {
   color: #fff;
-  font-size: 1.313rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 1.875em;
@@ -1256,6 +1259,41 @@ body {
     width: 100%;
   }
 }
+.about-header-background {
+  position: relative;
+  background-image: url(../img/chicago-skyline-frontpage.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-bottom: solid 8px #5B6670;
+  height: 500px;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  z-index: -1;
+}
+.about-header-background .about-headline {
+  position: absolute;
+  padding-top: 140px;
+  padding-left: 20px;
+  max-width: 700px;
+  z-index: 1;
+}
+.about-header-background .about-headline h3 {
+  font-size: 25px;
+  color: #FFF;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.about-header-background .about-headline h4 {
+  font-size: 35px;
+  color: #FFF;
+  font-weight: 500;
+  margin-top: 0;
+}
+
 /* EXPERIENCE SECTION */
 .experience {
   height: auto;
@@ -1417,12 +1455,19 @@ body {
 }
 
 .work-bg {
+  position: relative;
   height: 500px;
   width: 100%;
-  background-color: #333E48;
+  background-image: url(../img/desk-office-hero-workspace.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: saturate(0.5);
   margin: 0;
   padding: 0;
   border-bottom: solid 8px #5B6670;
+  z-index: -1;
 }
 
 .flex-center {
@@ -1431,8 +1476,10 @@ body {
 }
 
 .work-heading {
+  margin: 0;
   max-width: 800px;
-  padding: 0 50px 0 100px;
+  padding: 0 50px 0 20px;
+  z-index: 1;
 }
 .work-heading h3 {
   font-size: 25px;
@@ -1503,18 +1550,27 @@ body {
 }
 
 .process-header-background {
-  background-color: #333E48;
+  position: relative;
+  background-image: url(../img/people-coffee-tea-meeting.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: saturate(0.5);
   border-bottom: solid 8px #5B6670;
   height: 500px;
   width: 100%;
   text-align: left;
   padding: 0;
   margin: 0;
+  z-index: -1;
 }
 .process-header-background .process-headline {
+  position: absolute;
   padding-top: 140px;
   padding-left: 20px;
-  max-width: 65%;
+  max-width: 700px;
+  z-index: 1;
 }
 .process-header-background .process-headline h3 {
   font-size: 25px;
@@ -1529,7 +1585,25 @@ body {
   margin-top: 0;
 }
 
-.services p {
+.opacity-filter {
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  background-color: #000;
+  filter: opacity(0.5);
+  z-index: -1;
+}
+
+.services .row {
+  padding-bottom: 100px;
+  padding-top: 20px;
+}
+.services .row h4 {
+  font-size: 26px;
+}
+.services .row p {
+  font-size: 20px;
+  line-height: 1.5;
   padding-right: 20px;
 }
 
@@ -1546,6 +1620,9 @@ body {
 .how-i-do h6 {
   text-align: center;
   padding-bottom: 100px;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: normal;
 }
 .how-i-do h5 {
   color: #00C4B3;
@@ -1554,7 +1631,7 @@ body {
   margin-top: 20px;
 }
 .how-i-do p {
-  font-size: 16px;
+  font-size: 1em;
   color: #5B6670;
 }
 
@@ -1564,10 +1641,14 @@ body {
 }
 .process-timeline h3 {
   padding-top: 100px;
+  text-transform: uppercase;
   text-align: center;
 }
 .process-timeline h6 {
   text-align: center;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: normal;
 }
 .process-timeline h1 {
   color: #F5F8FA;
@@ -1576,7 +1657,7 @@ body {
   font-size: 150px;
 }
 .process-timeline .process-item {
-  width: 50%;
+  max-width: 500px;
 }
 .process-timeline .process-item h5 {
   color: #00C4B3;
@@ -1611,6 +1692,47 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom center;
+}
+
+.contact-bg {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-image: url(../img/phones.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: saturate(0.5);
+  margin: 0;
+  padding: 0;
+  border-bottom: solid 8px #5B6670;
+  z-index: -1;
+}
+
+.contact-heading {
+  margin: 0;
+  max-width: 700px;
+  padding: 0 50px 0 20px;
+  z-index: 1;
+}
+.contact-heading h3 {
+  font-size: 25px;
+  color: #FFF;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.contact-heading h4 {
+  font-size: 35px;
+  color: #FFF;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.contact h4 {
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
 .hoplite-header {

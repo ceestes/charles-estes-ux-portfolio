@@ -30,8 +30,7 @@ body
     float: right
     margin: 5px 50px 0 0
 
-    .nav
-
+    ul
       background-color: transparent
 
       li
@@ -470,44 +469,98 @@ body
 .push-top
   padding-top: 70px
 
-@media (max-width: 480px)
+.menu-trigger
+  display: none
+
+@media screen and (max-width: 480px)
+
+  .menu-trigger
+    float: right
+    display: block
+    margin: 0.938em 1.875rem 0 0
+
+  nav
+    display: none
+
+  .header
+    position: relative
+    height: 3.8em
+    width: 100%
+    nav
+      display: block
+      width: 100%
+      position: relative
+      background-color: #fff
+      opacity: .9
+      height: auto
+      float: left
+      margin: 9px 0 0 0
+      padding: 0 0 0 0
+      ul
+        padding: 0
+        margin: 0
+        li
+          float: none
+          display: block
+          text-align: center
+          padding: 15px 0 15px 0
+          border-bottom: solid 2px #999
+          a
+            margin: 0
+            font-size: 1em
+            font-weight: 600
+            //padding: 10px 0 10px 0
+          .active
+            border-bottom: none
+        li:hover
+          background-color: #666
+
   html
-    font-size: 12px
+    font-size: 16px
 
   .btn
     display: flex
     align-items: center
 
-  .capabilities
+  .header-background
+    position: relative
+    height: 800px
 
-    .wrapper
+  .headline
+    position: absolute
+    padding-top: 160px
+    img
+      margin-top: 50px
+  //.capabilities
 
-      .row-2
+    //.wrapper
+
+      //.row-2
         padding-top: 30px
         display: flex
         flex-wrap: wrap
 
-        .service
+        //.service
           margin: 20px 0 0 0
           display: flex
           width: 100%
 
-          .content
+          //.content
             width: 100%
 
-  .services-overview
+  //.services-overview
 
-    .wrapper
+    //.wrapper
 
-      .row-2
+      //.row-2
         padding-top: 30px
         display: flex
         flex-wrap: wrap
 
-        .service-item
+        //.service-item
           margin: 20px 0 0 0
           display: flex
           width: 100%
 
-          .content
+          //.content
             width: 100%

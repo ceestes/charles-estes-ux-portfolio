@@ -18,7 +18,7 @@ body
   text-align: center
 
 .header
-  background-color: rgba(white,0.8)
+  background-color: #fff
   height: 4.188em
 
   .logo
@@ -27,6 +27,7 @@ body
     margin: 0.938em 0 0 1.875rem
 
   nav
+    display: block
     float: right
     margin: 5px 50px 0 0
 
@@ -288,6 +289,7 @@ body
     text-align: center
     font-size: 40px
     font-weight: normal
+    max-width: 100%
 
   h4
     text-align: center
@@ -301,9 +303,9 @@ body
     color: #00C4B3
 
   .button-2
-    position: relative
-    left: 50%
-    margin-left: -6.150rem
+    //position: relative
+    //left: 50%
+    //margin-left: -6.150rem
     margin-top: 60px
     margin-bottom: 100px
 
@@ -333,12 +335,19 @@ body
 
 .services-img
   //position: relative
+  height: 300px
+  //width: 1020px
+  background:
+    image: url(../img/services-venn-diagram.svg)
+    size: contain
+    position: center center
+    repeat: no-repeat
   display: flex
   justify-content: center
   max-width: 100%
   //left: 50%
   //padding: 0 20px 0 20px
-  margin: 100px 20px 30px 20px
+  margin: 100px 0 30px 0
 
 /* MY WORK SECTION
 
@@ -363,16 +372,19 @@ body
 
 .lh-home
   position: absolute
-  height: 800px
-  width: 50%
-  top: 28%
+  float: none
+  height: 700px
+  width: 400px
+  left: 10%
+  max-width: 100%
+  top: 31%
   padding: 0 20px 0 20px
   background:
     image: url(../img/local-harvest-home@2x.png)
     size: contain
     position: top center
     repeat: no-repeat
-  z-index: 0
+  z-index: -1
 
 .work
   position: relative
@@ -383,15 +395,18 @@ body
   overflow: hidden
   border-top: solid 8px #5B6670
   border-bottom: solid 8px #5B6670
+  z-index: -1
 
   .work-headline
     //margin: 260px 0 0 0
     position: relative
     padding: 0 20px 0 20px
-    max-width: 40%
+    width: 40%
+    max-width: 100%
     top: 32%
-    left: 50%
-    //z-index: 2
+    float: right
+    //left: 50%
+    z-index: 1
 
     h3
       //margin: 260px 0 0 0
@@ -407,7 +422,7 @@ body
       //position: relative
       margin-top: 30px
       margin-left: 0
-      left: 50%
+      //left: 50%
 
 /* HIRE ME SECTION
 
@@ -474,18 +489,21 @@ body
 
 @media screen and (max-width: 480px)
 
+
   .menu-trigger
     float: right
     display: block
-    margin: 0.938em 1.875rem 0 0
+    margin: 1em 1.875rem 0 0
 
   nav
     display: none
 
   .header
-    position: relative
-    height: 3.8em
+    z-index: 999
+    position: fixed
+    height: 54px
     width: 100%
+    box-shadow: 3px 0 7px 3px rgba(0, 0, 0, 0.4)
     nav
       display: block
       width: 100%
@@ -496,6 +514,8 @@ body
       float: left
       margin: 9px 0 0 0
       padding: 0 0 0 0
+      box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.4)
+      z-index: 998
       ul
         padding: 0
         margin: 0
@@ -513,10 +533,15 @@ body
           .active
             border-bottom: none
         li:hover
-          background-color: #666
+          background-color: #777
+          a
+            color: #00c4b3
+            //opacity: 1
+        li:last-child
+          border-bottom: none
 
   html
-    font-size: 16px
+    font-size: 12px
 
   .btn
     display: flex
@@ -524,29 +549,64 @@ body
 
   .header-background
     position: relative
-    height: 800px
+    height: 630px
+    background:
+      size: auto 700px
+      position: top right
 
   .headline
     position: absolute
-    padding-top: 160px
+    padding-top: 220px
     img
-      margin-top: 50px
-  //.capabilities
+      margin-top: 80px
 
-    //.wrapper
+  .services-overview
+    h3
+      text-align: left
+      font-size: 35px
+      padding: 120px 20px 0 20px
 
-      //.row-2
-        padding-top: 30px
-        display: flex
-        flex-wrap: wrap
+  .services-img
+    display: block
+    background:
+      size: cover
 
-        //.service
-          margin: 20px 0 0 0
+  .work
+    height: 500px
+    .work-headline
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      top: 25%
+      float: left
+      width: 90%
+      h3
+        font-size: 30px
+    .lh-home
+      opacity: .2
+      filter: saturate(.7) blur(3px) brightness(1.2)
+      display: block
+      width: 100%
+      top: 20%
+      left: 0
+      padding: 0 0 0 0
+
+  .capabilities
+    .wrapper
+      .row
+        .row-2
+          padding-top: 30px
           display: flex
-          width: 100%
-
-          //.content
+          flex-wrap: wrap
+          .service
+            margin: 20px 0 0 0
+            display: flex
             width: 100%
+            .content
+              width: 100%
+
+  .section-heading
+    max-width: 100%
 
   //.services-overview
 

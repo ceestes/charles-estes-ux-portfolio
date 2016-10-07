@@ -384,7 +384,7 @@ body
     size: contain
     position: top center
     repeat: no-repeat
-  z-index: -1
+  z-index: 0
 
 .work
   position: relative
@@ -395,7 +395,6 @@ body
   overflow: hidden
   border-top: solid 8px #5B6670
   border-bottom: solid 8px #5B6670
-  z-index: -1
 
   .work-headline
     //margin: 260px 0 0 0
@@ -406,7 +405,7 @@ body
     top: 32%
     float: right
     //left: 50%
-    z-index: 1
+    z-index: 99
 
     h3
       //margin: 260px 0 0 0
@@ -581,8 +580,12 @@ body
       float: left
       width: 90%
       h3
+        position: relative
         font-size: 30px
+      .button-2
+        position: relative
     .lh-home
+      position: absolute
       opacity: .2
       filter: saturate(.7) blur(3px) brightness(1.2)
       display: block
@@ -590,7 +593,6 @@ body
       top: 20%
       left: 0
       padding: 0 0 0 0
-
   .capabilities
     .wrapper
       .row

@@ -1191,7 +1191,7 @@ body {
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: 0;
 }
 
 .work {
@@ -1202,7 +1202,6 @@ body {
   overflow: hidden;
   border-top: solid 8px #5B6670;
   border-bottom: solid 8px #5B6670;
-  z-index: -1;
 }
 .work .work-headline {
   position: relative;
@@ -1211,7 +1210,7 @@ body {
   max-width: 100%;
   top: 32%;
   float: right;
-  z-index: 1;
+  z-index: 99;
 }
 .work .work-headline h3 {
   text-align: left;
@@ -1386,9 +1385,14 @@ body {
     width: 90%;
   }
   .work .work-headline h3 {
+    position: relative;
     font-size: 30px;
   }
+  .work .work-headline .button-2 {
+    position: relative;
+  }
   .work .lh-home {
+    position: absolute;
     opacity: 0.2;
     filter: saturate(0.7) blur(3px) brightness(1.2);
     display: block;
@@ -1877,6 +1881,10 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom center;
+}
+
+.process-gateway-mobile {
+  display: none;
 }
 
 @media screen and (max-width: 480px) {

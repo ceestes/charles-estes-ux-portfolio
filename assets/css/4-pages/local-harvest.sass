@@ -17,7 +17,7 @@
       font-size: 0.875em
       font-weight: 600
 
-  nav
+  .work-nav
     float: right
     margin-right: 50px
 
@@ -48,6 +48,63 @@
         opacity: 0.6
         //color: transparentize(black, 0.7)
 
+//mobile project nav
+
+.projects-mobile
+  display: none
+  position: fixed
+  margin-top: 54px
+  background-color: transparentize(white, 0.25)
+  height: 72px
+  width: 100%
+  z-index: 998
+  //box-shadow: 3px 5px 7px 0px rgba(0, 0, 0, 0.4)
+
+  .project-title-mobile
+    width: 100%
+    float: left
+    margin: 0 20px 0 25px
+
+    h5
+      float: left
+      margin: 10px 0 0 0
+      color: #333e48
+      text-transform: uppercase
+      letter-spacing: .05em
+      font-size: 0.875em
+      font-weight: 600
+      //width: 100%
+
+  .work-nav-mobile
+    max-width: 100%
+    //float: right
+    //margin-right: 15px
+    padding: 5px 20px 0 20px
+
+  .project-nav-mobile
+    background-color: transparent
+    margin: 4px 0 0 0
+    width: 100%
+    display: flex
+    justify-content: space-between
+
+    a
+      color: #333e48
+      font-weight: 600
+      font-size: 0.875em
+      text-decoration: none
+      text-transform: uppercase
+      letter-spacing: .05em
+
+      img
+        position: relative
+        top: 6px
+
+    a:hover
+      color: #00c4b3
+
+    .inactive
+      opacity: 0.6
 //#overlay
   position: relative
   background:
@@ -59,6 +116,7 @@
 .lh-head-container
   position: relative
   height: 550px
+  max-width: 100%
   z-index: -1
   overflow: hidden
 
@@ -73,6 +131,7 @@
     attachment: fixed
   height: 600px
   width: 100%
+  max-width: 100%
   filter: blur(3px) brightness(.60) saturate(.90)
   z-index: -1
 
@@ -185,8 +244,8 @@
       .persona-img
         //position: relative
         box-shadow: 3px 3px 5px 1.5px #ccc
-        width: 299.203
-        height: 897.609px
+        width: 300px
+        height: 898px
         //height: 900px
         //width: 100%
         //margin-left: 0
@@ -297,3 +356,97 @@
     height: auto
     display: block
     z-index: 999
+@media screen and (max-width: 480px)
+
+  .projects
+    display: hidden
+
+  .projects-mobile
+    display: block
+
+  //.section-heading
+    padding-left: 0
+
+  section
+    .proofing-header
+      height: auto
+      .row
+        padding-top: 150px
+        .proofing-macbook
+          height: 250px
+
+        .project-headline
+          display: flex
+          justify-content: center
+          flex-wrap: wrap
+          padding-top: 0
+          margin-left: 0
+          h1
+            width: 100%
+
+  .lh-head-container
+
+    .wrapper-md
+
+      .row
+
+        .lh-mockup-head
+          opacity: .7
+          filter: saturate(.7) blur(5px)
+          display: block
+          width: 100%
+          top: 20%
+          left: 0
+          padding: 0 0 0 0
+          z-index: -1
+
+        .project-headline
+          padding-top: 200px
+          margin-left: 0
+          z-index: 2
+          left: 0
+          top: 0
+
+  .lh-overview
+    .lh-summary
+      margin: 0 20px 0 20px
+      max-width: 100%
+  .lh-brief
+    height: auto
+    max-width: 100%
+
+    .col-3
+      img
+        margin-left: 0
+
+    h2
+      font-size: 30px
+      padding-top: 0
+      padding-bottom: 30px
+
+  .lh-persona
+    .wrapper
+      .row
+        .persona-img
+          height: auto
+          width: 100%
+
+  .lh-wireframes
+    .wrapper
+      .row
+        .col-12
+          img
+            max-width: 100%
+
+  .lh-features
+    .wrapper
+      .row
+        .col-12
+          img
+            max-width: 100%
+        .col-6
+          img
+            max-width: 100%
+
+  .prototype
+    display: none

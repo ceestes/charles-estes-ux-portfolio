@@ -23,7 +23,7 @@
 
 .project-headline
   margin-left: 30px
-  margin-top: 200px
+  padding-top: 200px
   //position: absolute
   //max-width: 33.333333%
   top: 40%
@@ -47,5 +47,26 @@
   position: relative
   background-color: #F5F8FA
   text-align: center
-  height: 300px
+  height: auto
+  max-width: 100%
   padding-top: 150px
+  padding-bottom: 100px
+
+@media screen and (max-width: 480px)
+
+  section
+    .smart-sense-header
+      height: auto
+      .row
+        padding-top: 150px
+        .ss-macbook
+          height: 250px
+
+        .project-headline
+          display: flex
+          justify-content: center
+          flex-wrap: wrap
+          padding-top: 0
+          margin-left: 0
+          h1
+            width: 100%
